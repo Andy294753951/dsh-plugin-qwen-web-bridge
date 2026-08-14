@@ -1,0 +1,31 @@
+{
+  "name": "qwen-web-bridge",
+  "version": "1.0.1",
+  "description": "Local browser bridge for controlling a logged-in Qwen web session (Qwen3.8 / qianwen.com / qwen.ai).",
+  "author": "local agent",
+  "type": "browser-extension-bridge",
+  "entrypoints": {
+    "extension": "extension",
+    "bridge_server": "bridge/bridge_server.py",
+    "client": "bridge/client.py"
+  },
+  "permissions": [
+    "tabs",
+    "scripting",
+    "cookies",
+    "storage",
+    "debugger",
+    "alarms"
+  ],
+  "host_permissions": [
+    "http://127.0.0.1:17172/*",
+    "http://localhost:17172/*",
+    "https://chat.qwen.ai/*",
+    "https://*.qwen.ai/*",
+    "https://*.qianwen.com/*",
+    "https://*.tongyi.com/*",
+    "https://*.aliyun.com/*",
+    "https://*.alicdn.com/*",
+    "https://*.alibaba-inc.com/*"
+  ]
+}

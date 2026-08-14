@@ -1,0 +1,29 @@
+{
+  "manifest_version": 3,
+  "name": "Qwen Local Bridge",
+  "version": "1.0.1",
+  "description": "Local bridge to control a logged-in Qwen web session from WSL.",
+  "permissions": [
+    "tabs",
+    "scripting",
+    "cookies",
+    "storage",
+    "debugger",
+    "alarms"
+  ],
+  "host_permissions": [
+    "http://127.0.0.1:17172/*",
+    "http://localhost:17172/*",
+    "https://chat.qwen.ai/*",
+    "https://*.qwen.ai/*",
+    "https://*.qianwen.com/*",
+    "https://*.tongyi.com/*",
+    "https://*.aliyun.com/*",
+    "https://*.alicdn.com/*",
+    "https://*.alibaba-inc.com/*"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {}
+}
