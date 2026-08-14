@@ -26,7 +26,7 @@ from typing import Any
 
 DEFAULT_HOST = "127.0.0.1"
 DEFAULT_PORT = 17172
-DEFAULT_STATE_DIR = Path(os.environ.get("QWEN_BRIDGE_STATE_DIR", Path.cwd() / ".qwen-bridge-state"))
+DEFAULT_STATE_DIR = Path(os.environ.get("QWEN_BRIDGE_STATE_DIR", Path(__file__).resolve().parent.parent / ".qwen-bridge-state"))
 
 
 class BridgeState:
